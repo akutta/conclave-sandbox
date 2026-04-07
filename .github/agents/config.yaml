@@ -1,0 +1,12 @@
+agents:
+  designer:
+    enabled: false
+  security:
+    enabled: true
+
+guardrails:
+  - rule: "This project uses Go. Do not introduce Python or other language files."
+  - rule: "Use only the Yahoo Finance unofficial API for price data — no paid data providers."
+    roles: ["architect", "coder"]
+  - rule: "All monetary calculations must use float64 — no integer cents."
+    roles: ["coder"]
